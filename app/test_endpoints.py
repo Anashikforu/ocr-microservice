@@ -42,7 +42,7 @@ async def test_async_endpoint():
 
         # Send a POST request to the async endpoint with the base64-encoded image
         path = f"{ENDPOINT}/imgasync"
-        response = await client.post("path", json={"data": base64_encoded_image})
+        response = await client.post(path, json={"data": base64_encoded_image})
         assert response.status_code == 200
         job_id = response.json()["job_id"]
 
