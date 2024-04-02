@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+redis
+requests
+rq
+pytest
+pytest-curio
+httpx
+aiofiles
+pillow
+pytesseract
+spacy
+textblob
+asyncio
+pre-commit
+gunicorn
