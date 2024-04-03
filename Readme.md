@@ -8,13 +8,15 @@ The OCR Service is a web application built using FastAPI that accepts base64_enc
 ### Building and running the application with Docker
 
 1. Create a virtual environment:
-`python3 -m venv .`
+`python -m venv .`
 `source bin/activate`
-2. Start the application by running:
-`docker compose up --build`.
-3. Restart the Docker containers:
+2. Install the required packages:
+`pip install -r requirements.txt`
+3. Start the application by running:
+`docker compose up --build`
+4. Restart the Docker containers:
 `docker-compose up`
-4. To stop and remove the containers:
+5. To stop and remove the containers:
 `docker-compose down`
 
 ### Installation without Docker
@@ -29,8 +31,8 @@ The OCR Service is a web application built using FastAPI that accepts base64_enc
 ### Commands
 
 1. Create a virtual environment:
-`python3 -m venv venv`
-`source venv/bin/activate`
+`python -m venv .`
+`source bin/activate`
 2. Install the required packages:
 `pip install -r requirements.txt`
 3. Install the English language model for spacy:
@@ -128,6 +130,7 @@ To run the tests for the OCR service, follow these steps:
 3. Run the synchronous and asynchronous tests both at a time:
 `pytest`
 
+#### Testing in Production
 To check the testcases at production:
 
 1. Change the `ENDPOINT` variable with the api url at `app/conftest.py`
